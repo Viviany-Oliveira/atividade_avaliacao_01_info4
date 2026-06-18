@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background: #f4f4f4; }
+        .form-container { max-width: 400px; margin: 50px auto; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        input[type="email"], input[type="password"] { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; }
+        button { background: #007bff; color: white; padding: 12px; border: none; border-radius: 5px; cursor: pointer; width: 100%; font-size: 16px; }
+        button:hover { background: #0056b3; }
+        .hint { background: #fff3cd; padding: 10px; border-radius: 5px; margin-top: 15px; font-size: 14px; }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>🔐 Login</h2>
+        <form method="POST">
+            {% csrf_token %}
+            <div>
+                <label>Email:</label>
+                <input type="email" name="email" required>
+            </div>
+            <div>
+                <label>Senha:</label>
+                <input type="password" name="senha" required>
+            </div>
+            <div class="hint">
+                <strong>Dica:</strong> admin@email.com / 123
+            </div>
+            <button type="submit">Entrar</button>
+        </form>
+        <br>
+        <a href="{% url 'home' %}">← Voltar</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background: #f4f4f4; }
+        .container { max-width: 600px; margin: 50px auto; background: #d1ecf1; color: #0c5460; padding: 30px; border-radius: 10px; border: 1px solid #bee5eb; }
+        .profile-info { background: white; padding: 25px; border-radius: 10px; text-align: center; }
+        .btn { display: inline-block; padding: 10px 20px; background: #dc3545; color: white; text-decoration: none; border-radius: 5px; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>👤 Bem-vindo ao Perfil!</h1>
+        <div class="profile-info">
+            <h2>Usuário: admin@email.com</h2>
+            <p><strong>Status:</strong> Autenticado com sucesso!</p>
+        </div>
+        <a href="{% url 'home' %}" class="btn">← Voltar ao Início</a>
+    </div>
+</body>
+</html>
